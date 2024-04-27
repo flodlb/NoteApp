@@ -4,7 +4,7 @@ import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 import java.io.Serializable
-/*c'est le format d'enregistrement des donné dans la base de donné*/
+/*c'est le format d'enregistrement des données dans la base de données*/
 @Entity(tableName = "note")
 data class Note (
     @PrimaryKey(autoGenerate = true)
