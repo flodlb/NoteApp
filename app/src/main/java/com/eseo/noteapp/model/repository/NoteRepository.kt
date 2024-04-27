@@ -10,17 +10,17 @@ import com.eseo.noteapp.model.entity.Note
 class NoteRepository(
     private val noteDao: NoteDao
 ) {
-//ca recupere les tous les notes dans la base de donné
+//Récupère toutes les notes dans la base de donné
     val notes : LiveData<List<Note>> = noteDao.getAllNotes()
-//pour insere un note dans la BD
+//Insère une note dans la BD
     suspend fun insertNote(note: Note){
         noteDao.insertNote(note)
     }
-// pour supprimer dans la BD des note
+//Supprimer une note dans la BD 
     suspend fun deleteNote(id : Int){
         noteDao.deleteNote(id)
     }
-//pour mettre a jour des note
+//Met à jour des notes
     suspend fun updateNote(note: Note){
         noteDao.updateNote(note)
     }
