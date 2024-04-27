@@ -4,9 +4,9 @@ import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 import java.io.Serializable
-
+/*c'est le format d'enregistrement des donné dans la base de donné*/
 @Entity(tableName = "note")
-data class Note(
+data class Note (
     @PrimaryKey(autoGenerate = true)
     var id: Int = 0,
 

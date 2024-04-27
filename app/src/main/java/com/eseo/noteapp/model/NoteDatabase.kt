@@ -7,13 +7,11 @@ import androidx.room.RoomDatabase
 import com.eseo.noteapp.model.dao.NoteDao
 import com.eseo.noteapp.model.entity.Note
 
-
+// Cette classe est responsable de la création et de la gestion de la base de données.
 @Database(entities = [Note::class], version = 1)
 abstract class NoteDatabase : RoomDatabase() {
 
-    abstract fun getNoteDao() : NoteDao
-
-    companion object{
+    abstract fun getNoteDao() : NoteDao companion object{
 
         @Volatile
         private var NOTE_INSTANCE : NoteDatabase? = null
